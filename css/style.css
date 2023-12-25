@@ -65,6 +65,15 @@ body{
     font-size: 50px;
 }
 
+.Score{
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
 
 
 @keyframes jump{

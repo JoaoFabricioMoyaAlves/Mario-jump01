@@ -3,6 +3,25 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameover = document.querySelector('.game-over')
+
+let segundos = 0;
+
+        // Função para atualizar e exibir o contador
+        function atualizarContador() {
+            document.getElementById('contador').innerText = segundos;
+        }
+
+        // Função que será chamada a cada segundo
+        function incrementarSegundos() {
+            segundos++;
+            atualizarContador();
+        }
+
+        // Atualiza o contador a cada segundo (1000 milissegundos)
+        const intervalo = setInterval(incrementarSegundos, 1000);
+
+
+
 const jump = () => {
   mario.classList.add('jump');
 
@@ -36,6 +55,8 @@ const loop = setInterval(() => {
       mario.style.marginLeft = '50px';
 
       gameover.style.display = 'block';
+
+      clearInterval(intervalo);  
     
      clearInterval(loop);
    
