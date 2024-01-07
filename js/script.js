@@ -77,3 +77,4 @@ function recarregarPagina() {
 
 
 document.addEventListener('keydown',jump);
+document.addEventListener('click',jump);
